@@ -1,8 +1,14 @@
 import React from 'react'
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
-
-export default function Header() {
+import { Container } from 'react-bootstrap'
+import Header from "../Header"
+export default function Layout(props) {
     return (
-        <div>hello</div>
+        <div>
+            <Header/>
+            <Container>
+                {props.children}
+            </Container>
+            
+        </div>
     )
 }
