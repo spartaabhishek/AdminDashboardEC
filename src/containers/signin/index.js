@@ -1,17 +1,17 @@
-import {React,useDispatch} from "react";
+import {React} from "react";
 import Layout from "../../components/Layout";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import Input from "../../components/UI/input";
 import { login } from '../../action'
-
+import {useDispatch} from 'react-redux'
 
 function Signin() {
-  // const dispatch=useDispatch()
+   const dispatch=useDispatch()
   const userLogin = (e) => {
     e.preventDefault();
     const user =
       { email: 'neelesh@gmail.com', password: "neelesh123" }
-    login(user)
+    dispatch(login(user))
   }
 
   return (
